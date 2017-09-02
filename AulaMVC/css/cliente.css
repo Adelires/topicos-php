@@ -1,0 +1,88 @@
+
+body{
+    background-image: url('https://www.hdwallpapers.in/walls/windows_xp_bliss-wide.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 50px;
+    font-family: monospace;
+    font-size:15px;
+}
+
+fieldset{
+    
+    width: 650px;
+    margin: auto;
+    background-color: white;
+    padding: 0;
+   
+}
+
+#cima{
+    
+    width:100%;
+    background-color: rgb(253, 247, 247);
+    color: black;
+    text-align: center;
+    padding: 8px 0;
+}
+
+form, #box-cmd{
+    padding-left: 15px;
+    padding-top: 15px;
+    border: 6px solid rgb(253, 247, 247);
+    border-top:0;
+    color:white;
+    background-color: black;
+}
+
+input{
+    border:none;
+    background-color: black;
+    border-bottom: 1px dashed blanchedalmond;
+    color: rgb(47, 244, 10);
+    margin-bottom: 5px;
+}
+
+textarea{
+    border: 1px dashed blanchedalmond;
+    background-color: black;
+    color: rgb(47, 244, 10);
+    margin-top: 15px;
+}
+
+#icons{
+    float:right;
+    display: inline-block;
+    padding-right: 8px;
+}
+
+.fa-window-minimize{
+    color: black;
+}
+
+.fa-window-maximize{
+    color:black;
+}
+
+.fa-times{
+    padding: 3px;
+    background-color:red;
+    color:white;
+}
+
+#botao{
+    text-align: right;
+    padding-right: 10px;
+    
+}
+#botao> input{
+    color:blanchedalmond;
+    border-color:black;
+}
+
+
+
+label[for="sobrenome"]{
+    padding-left: 15px;
+    
+}

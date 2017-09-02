@@ -1,7 +1,10 @@
 <?php
-
+  session_start();
+  
   include '../Model/UserModel.php';
   include '../Include/UserValidate.php';
+  include '../Persistence/ConnectionDB.php';
+  include '../Dao/UserDAO.php';
 
 if ((!empty($_POST['txtUser'])) &&
     (!empty($_POST['txtNome'])) &&
@@ -23,21 +26,30 @@ if ((!empty($_POST['txtUser'])) &&
     if(count($erros)==0){
         
        $user = new UserModel();
-        
+       
        $user->user = $_POST['txtUser'];
        $user->nome = $_POST['txtNome'];
        $user->idade = $_POST['txtIdade'];
        $user->sobrenome = $_POST['txtSobrenome'];
        $user->email = $_POST['txtEmail'];
-       $user->senha = $_POST['pwdSenha'];
+       $user->password = $_POST['pwdSenha'];
+        
+       $userDao = new UserDAO();
+       $userDao->insertUser($user);
        
-       header("location:../View/UserViewResult.php?" . "user=$user->user&" . "email=$user->email");
+       $_SESSION['user'] = $user->user;
+       $_SESSION['email'] = $user->email;
+       
+       
+       header("location:../View/UserViewResult.php");
         
     } else {
         
        $err = serialize($erros);
        
-       header("location:../View/UserViewError.php?" . "erros=$err");
+       $_SESSION['erros'] = $err;
+       
+       header("location:../View/UserViewError.php");
     } 
     
 } else {

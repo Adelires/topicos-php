@@ -2,13 +2,13 @@
     session_start();
 ?>
 
+
 <!DOCTYPE html>
 
 <html>
     <head>
-        <link charset="utf-8">
-        <link rel="stylesheet" href="../css/user.css">
         <title> Cadastro de Usuário com Erros</title>
+        
     </head>
     
     <body>
